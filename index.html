@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>MathJax GitHub Pages Example</title>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
             background-color: #f9f9f9;
+            padding: 20px;
+            line-height: 1.6;
         }
         h1 {
             color: #333;
+            text-align: center;
         }
-        p {
-            color: #555;
+        .equation {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site 🚀</h1>
-    <p>This is hosted directly from my GitHub repository using <strong>GitHub Pages</strong>.</p>
+    <h1>MathJax on GitHub Pages</h1>
+    <p>This is an example of a differential equation rendered using MathJax:</p>
+    <div class="equation">
+        $$\dot{y} = a(u - y)$$
+    </div>
+    <p>You can write more math inline like $y' = a(u - y)$ or in display mode as above.</p>
 </body>
 </html>
