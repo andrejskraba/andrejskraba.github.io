@@ -20,10 +20,23 @@
             background-color: #f9f9f9;
             padding: 20px;
             line-height: 1.6;
+            margin: 0;
         }
         h1 {
             color: #333;
             text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+        }
+        .math-block {
+            text-align: center;
+            margin: 20px 0;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
         }
     </style>
 </head>
@@ -31,7 +44,9 @@
     <h1>MathJax on GitHub Pages</h1>
     <p>This is an example of a differential equation rendered using MathJax:</p>
 
-    $$\dot{y} = a(u - y)$$
+    <div class="math-block">
+        $$\dot{y} = a(u - y)$$
+    </div>
 
     <p>You can write more math inline like $y' = a(u - y)$ or in display mode as above.</p>
 </body>
