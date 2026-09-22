@@ -1,53 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathJax GitHub Pages Example</title>
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-    </script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            padding: 20px;
-            line-height: 1.6;
-            margin: 0;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-        }
-        p {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-        }
-        .math-block {
-            text-align: center;
-            margin: 20px 0;
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teorija sistemov in informacij</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #203047;
+      --accent: #245ba8;
+      --paper: #ffffff;
+      --background: #f3f5f8;
+      --line: #dce2ea;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 3rem 1.5rem;
+      background: var(--ink);
+      color: white;
+      text-align: center;
+    }
+
+    header p {
+      margin: 0;
+      color: #cbd6e6;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 1.5rem;
+      align-self: start;
+    }
+
+    nav h2 { font-size: 1.1rem; }
+
+    nav ol {
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: block;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    main { min-width: 0; }
+
+    section {
+      margin-bottom: 2rem;
+      padding: clamp(1.25rem, 4vw, 3rem);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--paper);
+      scroll-margin-top: 1.5rem;
+    }
+
+    section h2 {
+      margin-top: 0;
+      line-height: 1.3;
+    }
+
+    .draft {
+      display: inline-block;
+      padding: 0.15rem 0.65rem;
+      border-radius: 5px;
+      background: #fff0ca;
+      color: #715000;
+      font-size: 0.85rem;
+    }
+
+    .placeholder {
+      padding: 1rem;
+      border-left: 3px solid var(--line);
+      color: #526278;
+    }
+
+    footer {
+      padding: 1rem 1.5rem 2rem;
+      text-align: center;
+      color: #526278;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; }
+    }
+
+    @media print {
+      body { background: white; color: black; }
+      header { background: white; color: black; }
+      header p, nav, footer { display: none; }
+      .layout { display: block; margin: 0; padding: 0; }
+      section {
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+        break-before: page;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>MathJax on GitHub Pages</h1>
-    <p>This is an example of a differential equation rendered using MathJax:</p>
+  <header>
+    <h1>Teorija sistemov in informacij</h1>
+    <p>Skripta</p>
+  </header>
 
-    <div class="math-block">
-        $$\dot{y} = a(u - y)$$
-    </div>
+  <div class="layout">
+    <nav aria-label="Kazalo knjige">
+      <h2>Kazalo</h2>
+      <ol>
+        <li><a href="#poglavje-1">1. poglavje</a></li>
+        <li><a href="#poglavje-2">2. poglavje</a></li>
+        <li><a href="#poglavje-3">3. poglavje</a></li>
+      </ol>
+    </nav>
 
-    <p>You can write more math inline like $y' = a(u - y)$ or in display mode as above.</p>
+    <main>
+      <section id="poglavje-1" aria-labelledby="naslov-1">
+        <h2 id="naslov-1">1. poglavje</h2>
+
+        <!-- ZAČETEK OBSTOJEČE VSEBINE
+             Spodnji odstavek nadomestite z obstoječo vsebino.
+             Za podnaslove uporabite <h3>, za odstavke pa <p>.
+        -->
+        <p class="placeholder">
+          Tukaj bo vključena obstoječa vsebina knjige.
+        </p>
+        <!-- KONEC OBSTOJEČE VSEBINE -->
+      </section>
+
+      <section id="poglavje-2" aria-labelledby="naslov-2">
+        <h2 id="naslov-2">2. poglavje</h2>
+        <span class="draft">Osnutek</span>
+        <p>Osnutek poglavja. Vsebina bo dodana pozneje.</p>
+      </section>
+
+      <section id="poglavje-3" aria-labelledby="naslov-3">
+        <h2 id="naslov-3">3. poglavje</h2>
+        <span class="draft">Osnutek</span>
+        <p>Osnutek poglavja. Vsebina bo dodana pozneje.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>Teorija sistemov in informacij</footer>
 </body>
 </html>
