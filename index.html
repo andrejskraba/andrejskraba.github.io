@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    window.MathJax = {
+      tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+   };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
   <title>Teorija sistemov in informacij</title>
   <style>
     :root {
@@ -169,9 +181,17 @@
       </section>
 
       <section id="poglavje-2" aria-labelledby="naslov-2">
-        <h2 id="naslov-2">2. poglavje</h2>
-        <span class="draft">Osnutek</span>
-        <p>Osnutek poglavja. Vsebina bo dodana pozneje.</p>
+       <h2 id="naslov-2">2. poglavje</h2>
+       <span class="draft">Osnutek</span>
+       <p>Osnutek poglavja. Vsebina bo dodana pozneje.</p>
+
+       <p>This is an example of a differential equation rendered using MathJax:</p>
+
+       <div class="math-block">
+           $$\dot{y} = a(u - y)$$
+       </div>
+
+       <p>You can write more math inline like $y' = a(u - y)$ or in display mode as above.</p>
       </section>
 
       <section id="poglavje-3" aria-labelledby="naslov-3">
